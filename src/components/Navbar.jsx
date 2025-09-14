@@ -12,7 +12,7 @@ export default function Navbar(){
             className="img-fluid rounded-circle"
             style={{ height: "5vw", width: "auto" }}
           />
-          <span className="ms-2" style={{color : "#014220"}}>Federal Youth Parliment</span>
+          <span className="ms-2 fw-bold" style={{color : "#014220"}}>Federal Youth Parliment</span>
         </NavLink>
 
         {/* Mobile toggle button */}
@@ -116,7 +116,7 @@ export default function Navbar(){
             </li>
           </ul>
            {/* Join Us Button */}
-          <NavLink to="/membership" className="btn rounded-pill d-none d-lg-block ms-lg-3 mt-2 mt-lg-0" style={{backgroundColor:  "#014220" , color : "white"}}>
+          <NavLink to="/membership" className="btn rounded-pill d-none d-lg-block ms-lg-3 mt-2 mt-lg-0" style={{backgroundColor:  "#014220" , color : " #fff"}}>
             Join Us
           </NavLink>
         </div>
