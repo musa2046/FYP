@@ -1,0 +1,10 @@
+.nav-elements{
+    transition: all 0.3s ease;
+}
+.nav-elements:hover{
+     color: #014220 !important; 
+    transform: scale(1.1);   
+}
+.active{
+    color: #014220 !important;
+}
