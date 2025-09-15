@@ -1,4 +1,5 @@
 import {NavLink, Link } from "react-router-dom"
+import CTA from "./CTA"
 export default function Navbar(){
     return(
         <>
@@ -12,7 +13,7 @@ export default function Navbar(){
             className="img-fluid rounded-circle"
             style={{ height: "5vw", width: "auto" }}
           />
-          <span className="ms-2 fw-bold" style={{color : "#014220"}}>Federal Youth Parliment</span>
+          <span className="ms-2 fw-bold" style={{color : "#037c3e"}}>Federal Youth Parliment</span>
         </NavLink>
 
         {/* Mobile toggle button */}
@@ -29,18 +30,18 @@ export default function Navbar(){
         </button>
 
         {/* Navbar links */}
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div className="collapse navbar-collapse fs-5" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <NavLink className="nav-link nav-elements" to="/">
+              <NavLink className="nav-link nav-elements fw-semibold" to="/">
                 Home
               </NavLink>
             </li>
 
             {/* About dropdown */}
             <li className="nav-item dropdown">
-              <NavLink
-                className="nav-link dropdown-toggle nav-elements"
+              <button
+                className="nav-link dropdown-toggle nav-elements fw-semibold"
                 to="#"
                 id="aboutDropdown"
                 role="button"
@@ -48,20 +49,20 @@ export default function Navbar(){
                 aria-expanded="false"
              >
                 About
-              </NavLink>
+              </button>
               <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
                 <li>
-                  <NavLink className="dropdown-item nav-elements" to="/about">
+                  <NavLink className="dropdown-item nav-elements fw-semibold" to="/about">
                     Mission
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item nav-elements" to="/constitution">
+                  <NavLink className="dropdown-item nav-elements fw-semibold" to="/constitution">
                     Constitution
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item nav-elements" to="/executive">
+                  <NavLink className="dropdown-item nav-elements fw-semibold" to="/executive">
                     Executive Members
                   </NavLink>
                 </li>
@@ -69,15 +70,15 @@ export default function Navbar(){
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link nav-elements" to="/programs">
+              <NavLink className="nav-link nav-elements fw-semibold" to="/programs">
                 Programs
               </NavLink>
             </li>
 
             {/* Membership dropdown */}
             <li className="nav-item dropdown">
-              <NavLink
-                className="nav-link dropdown-toggle nav-elements"
+              <button
+                className="nav-link dropdown-toggle nav-elements fw-semibold"
                 to="#"
                 id="membershipDropdown"
                 role="button"
@@ -85,18 +86,18 @@ export default function Navbar(){
                 aria-expanded="false"
               >
                 Membership
-              </NavLink>
+              </button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="membershipDropdown"
               >
                 <li>
-                  <NavLink className="dropdown-item nav-elements" to="/membership">
+                  <NavLink className="dropdown-item nav-elements fw-semibold" to="/membership">
                     Join
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item nav-elements" to="/memberList">
+                  <NavLink className="dropdown-item nav-elements fw-semibold" to="/memberList">
                     Members List
                   </NavLink>
                 </li>
@@ -104,21 +105,19 @@ export default function Navbar(){
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link nav-elements" to="/news">
+              <NavLink className="nav-link nav-elements fw-semibold" to="/news">
                 News
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link nav-elements" to="/contact">
+              <NavLink className="nav-link nav-elements fw-semibold" to="/contact">
                 Contact
               </NavLink>
             </li>
           </ul>
            {/* Join Us Button */}
-          <NavLink to="/membership" className="btn rounded-pill d-none d-lg-block ms-lg-3 mt-2 mt-lg-0" style={{backgroundColor:  "#014220" , color : " #fff"}}>
-            Join Us
-          </NavLink>
+          <CTA text="Join us" path="/membership"/>
         </div>
       </div>
     </nav>
